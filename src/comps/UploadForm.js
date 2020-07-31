@@ -6,12 +6,12 @@ const UploadForm = () => {
     const [file, setFile] = useState(null);
     const [error, setError] = useState(null);
 
-    const type = ['image/png', 'image/jpg'];
+    const types = ['image/png', 'image/jpeg'];
 
     const changeHandler = (e) => {
         let selected = e.target.files[0];
         
-        if(selected && type.includes(selected.type)){
+        if(selected && types.includes(selected.type)){
             setFile(selected);
             setError('');
         }else{
